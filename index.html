@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Regalo JoJo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="menacing" style="top: 10px; left: 10px;">ゴゴゴ</div>
+    <div class="menacing" style="bottom: 20px; right: 20px;">ゴゴゴ</div>
+
+    <div class="container">
+        <h1 class="jojo-title">✨ Tarjeta Regalo JoJo ✨</h1>
+
+        <div class="question active" id="q1">
+            <p>Pregunta 1: (edítala tú)</p>
+            <input type="text" id="a1">
+            <button onclick="nextQuestion(1)">Responder</button>
+        </div>
+
+        <div class="question" id="q2">
+            <p>Pregunta 2: (edítala tú)</p>
+            <input type="text" id="a2">
+            <button onclick="nextQuestion(2)">Responder</button>
+        </div>
+
+        <div class="question" id="q3">
+            <p>Pregunta 3: (edítala tú)</p>
+            <input type="text" id="a3">
+            <button onclick="nextQuestion(3)">Responder</button>
+        </div>
+
+        <div id="regalo">
+            🎁✨ ¡Has llegado al final! ✨🎁 <br><br>
+            ⭐ Tu regalo es el tatuaje de la estrella de los JoJo’s ⭐  
+            <br><br>
+            <button id="oraButton" class="ora-btn">ORA ORA ORA</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
