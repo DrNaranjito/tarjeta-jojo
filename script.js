@@ -6,10 +6,20 @@ function nextQuestion(num) {
         const next = document.getElementById("q" + (num + 1));
         next.classList.add("active");
     } else {
-        document.getElementById("regalo").style.display = "block";
+        // Flash dramático
+        const flash = document.createElement("div");
+        flash.classList.add("flash");
+        document.body.appendChild(flash);
+
+        // Mostrar regalo con animación
+        const regalo = document.getElementById("regalo");
+        setTimeout(() => {
+            regalo.classList.add("show");
+        }, 300);
     }
 }
 
+// Animación del botón ORA ORA
 document.addEventListener("DOMContentLoaded", () => {
     const oraBtn = document.getElementById("oraButton");
 
