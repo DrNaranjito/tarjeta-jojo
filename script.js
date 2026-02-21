@@ -1,14 +1,9 @@
 // ===============================
-//   CARGA DE SONIDOS
+//   CARGA DE SONIDO ORA ORA
 // ===============================
 
-// Sonido ORA ORA
 const soundOra = new Audio("sounds/ora.mp3");
 soundOra.volume = 1.0;
-
-// Sonido OI JOSUKE
-const soundJosuke = new Audio("sounds/oijosuke.mp3");
-soundJosuke.volume = 1.0;
 
 
 // ===============================
@@ -38,33 +33,22 @@ function nextQuestion(num) {
 
 
 // ===============================
-//   BOTONES DE SONIDO
+//   BOTÓN ORA ORA
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    // Botón ORA ORA
     const oraBtn = document.getElementById("oraButton");
-    if (oraBtn) {
-        oraBtn.addEventListener("click", () => {
-            soundOra.currentTime = 0;
-            soundOra.play();
 
-            oraBtn.classList.add("oraAttack");
-            setTimeout(() => oraBtn.classList.remove("oraAttack"), 600);
-        });
-    }
+    oraBtn.addEventListener("click", () => {
+        // Reproducir sonido
+        soundOra.currentTime = 0;
+        soundOra.play();
 
-    // Botón OI JOSUKE (si existe)
-    const josukeBtn = document.getElementById("josukeButton");
-    if (josukeBtn) {
-        josukeBtn.addEventListener("click", () => {
-            soundJosuke.currentTime = 0;
-            soundJosuke.play();
+        // Animación del botón
+        oraBtn.classList.add("oraAttack");
 
-            josukeBtn.classList.add("oraAttack");
-            setTimeout(() => josukeBtn.classList.remove("oraAttack"), 600);
-        });
-    }
-
+        setTimeout(() => {
+            oraBtn.classList.remove("oraAttack");
+        }, 600);
+    });
 });
