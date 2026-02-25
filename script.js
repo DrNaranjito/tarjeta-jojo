@@ -4,7 +4,7 @@
 
 const soundOra = new Audio("sounds/ora.mp3");
 soundOra.volume = 1.0;
-
+ 
 
 // ===============================
 //   CAMBIO DE PREGUNTAS
@@ -52,3 +52,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 600);
     });
 });
+
